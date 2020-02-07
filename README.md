@@ -1,2 +1,2 @@
-# HW1
-automation crank
+# 2020MechatronicsHomeWork
+
