@@ -9,3 +9,6 @@
 ### Spider leg motion
 ![Breadboard](/week1/spider2.gif)
 ## Week 2 homework:
+## Week 4 homework:
+![Breadboard](/week4/ledControlSetUp.JPG)
+![Breadboard](/week4/ledControlCode.PDF)
