@@ -1,10 +1,11 @@
 # 2020MechatronicsHomeWork
 ## Week 1 homework:
-### rhino
+### Rhino
 ![Breadboard](/week1/rhino.JPG)
-### failed link
+### Failed link
 ![Breadboard](/week1/failedLinks.JPG)
-### rhino motion
+### Rhino motion
 ![Breadboard](/week1/rhino2.gif)
-### spider leg motion
+### Spider leg motion
 ![Breadboard](/week1/spider2.gif)
+## Week 2 homework:
