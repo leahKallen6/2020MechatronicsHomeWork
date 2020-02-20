@@ -11,4 +11,5 @@
 ## Week 2 homework:
 ## Week 4 homework:
 ![Breadboard](/week4/ledControlSetUp.JPG)
-![Breadboard](/week4/ledControlCode.PDF)
+![Breadboard](/week4/ledControlCode.pdf)
+![Breadboard](/week4/ledControl2.gif)
