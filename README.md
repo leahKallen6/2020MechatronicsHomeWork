@@ -9,6 +9,10 @@
 ### Spider leg motion
 ![Breadboard](/week1/spider2.gif)
 ## Week 2 homework:
+### Walking Cat
+![Breadboard](/week2/walkingCat.JPG)
+### Walking Cat motion
+![Breadboard](/week2/walkingCatHandCrank.gif)
 ## Week 4 homework:
 ![Breadboard](/week4/ledControlSetUp.JPG)
 ![Breadboard](/week4/ledControl2.gif)
