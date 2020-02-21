@@ -13,6 +13,9 @@
 ![Breadboard](/week2/walkingCat.JPG)
 ### Walking Cat motion
 ![Breadboard](/week2/walkingCatHandCrank.mp4.gif)
+## Week 3 homework:
+![Breadboard](/week3/motorCat.JPG)
+![Breadboard](/week3/motorCat.gif)
 ## Week 4 homework:
 ![Breadboard](/week4/ledControlSetUp.JPG)
 ![Breadboard](/week4/ledControl2.gif)
