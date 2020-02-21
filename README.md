@@ -44,22 +44,22 @@ void loop() {
   Serial.println(sensorValue);
   delay(1);        // delay in between reads for stability
   // sets 4 conditions to determine how many LEDs will light up based on Photoresistor input value
-  if (sensorValue >=131){
+  if (sensorValue >=650){
    digitalWrite(12, LOW);
    digitalWrite(8, LOW);
    digitalWrite(4, LOW);
   }
-  if (sensorValue <=130){
+  if (sensorValue <=649){
       digitalWrite(12, HIGH);
-      digitalWrite(12, HIGH);
+      digitalWrite(8, LOW);
       digitalWrite(4, LOW);
   }
-  if (sensorValue <=25){
+  if (sensorValue <=350){
    digitalWrite(12, HIGH);
    digitalWrite(8, HIGH);
    digitalWrite(4, LOW);
   }
-    if (sensorValue <=15){
+    if (sensorValue <=275){
    digitalWrite(12, HIGH);
    digitalWrite(8, HIGH);
    digitalWrite(4, HIGH);
