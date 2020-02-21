@@ -21,6 +21,7 @@
 ![Breadboard](/week4/ledControl2.gif)
 ### Arduino LDR controled LEDs circuit board
 ![Breadboard](/week4/ledControlSetUp.JPG)
+### Arduino LDR controled LEDs code
 ```cpp
 /*
   Program controls 3 LED lights based on a photoresistor's input value. the values are broken up into 4 tiers.
