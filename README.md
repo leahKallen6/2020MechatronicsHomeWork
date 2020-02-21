@@ -17,8 +17,10 @@
 ![Breadboard](/week3/motorCat.JPG)
 ![Breadboard](/week3/motorCat.mp4.gif)
 ## Week 4 homework:
-![Breadboard](/week4/ledControlSetUp.JPG)
+### Arduino LDR controled LEDs
 ![Breadboard](/week4/ledControl2.gif)
+### Arduino LDR controled LEDs circuit board
+![Breadboard](/week4/ledControlSetUp.JPG)
 ```cpp
 /*
   Program controls 3 LED lights based on a photoresistor's input value. the values are broken up into 4 tiers.
