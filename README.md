@@ -12,7 +12,7 @@
 ### Walking Cat
 ![Breadboard](/week2/walkingCat.JPG)
 ### Walking Cat motion
-![Breadboard](/week2/walkingCatHandCrank.gif)
+![Breadboard](/week2/walkingCatHandCrank.mp4.gif)
 ## Week 4 homework:
 ![Breadboard](/week4/ledControlSetUp.JPG)
 ![Breadboard](/week4/ledControl2.gif)
