@@ -69,3 +69,59 @@ void loop() {
   }
 }
 ```
+## Week 5 homework:
+### 3D Modeled walking cat in rhino
+![Breadboard](/week5/walkingCatRhinoModel.JPG)
+### Walking cat 3D printed parts and test fits
+![Breadboard](/week5/walkingCat3dPrintParts.JPG)
+### Arduino motor control with potentiometer and LED indicators video
+![Breadboard](/week5/motorControlVideo.gif)
+### Arduino motor control with potentiometer and LED indicators circuit board
+![Breadboard](/week5/motorControlSetUp.JPG)
+### Arduino motor control with potentiometer and LED indicators code
+```cpp
+/*
+  This program controls the speed of a DC Motor using a potentiometer. 2 LED lights are used to indicate if
+  The motor is recieving power. Green indicates power is on, Red indicates power is off. The DC motor needs
+  an analog value of at least 75 to get the motor moving, thus the code is set up to stop giving power if
+  the analog value is less than 75.
+
+*/
+
+// the setup routine runs once when you press reset:
+void setup() {
+  // initialize serial communication at 9600 bits per second:
+  Serial.begin(9600);
+  //set pin 4,8 and 9 as outputs
+  pinMode(4, OUTPUT);
+  pinMode(8, OUTPUT);
+  pinMode(9, OUTPUT);
+  //set pin A0 as input
+  pinMode(A0, INPUT);
+}
+
+// the loop routine runs over and over again forever:
+void loop() {
+  // read the input on analog pin 0:
+  int sensorValue = analogRead(A0);
+  // map the potentiometer value to be 0 to 255 to later control anologwrite values
+  int outputValue = map(sensorValue, 0, 1024,0, 255);
+  // print out the value you read:
+  Serial.println(outputValue);
+  delay(1);        // delay in between reads for stability
+  // sets 2 conditions for how motor will recieve power
+  // if the value is equal or less than 74 no power will be given to the motor and red LED will be on
+  if (outputValue <=74){
+   digitalWrite(9, LOW);
+   digitalWrite(8, LOW);
+   digitalWrite(4, HIGH);
+  }
+  // if the value is equal or greater than 75 power will be given to the motor based on the outputValue of the potentiometer
+  // Green LED will be on
+  if (outputValue >=75){
+    analogWrite(9, outputValue);
+    digitalWrite(8, HIGH);
+    digitalWrite(4, LOW);
+  }
+}
+```
