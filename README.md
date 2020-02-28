@@ -75,6 +75,7 @@ void loop() {
 ### Walking cat 3D printed parts and test fits
 ![Breadboard](/week5/walkingCat3dPrintParts.JPG)
 ### Arduino motor control with potentiometer and LED indicators video
+#### GIF format makes top speed of motor look slower but it is really faster
 ![Breadboard](/week5/motorControlVideo.gif)
 ### Arduino motor control with potentiometer and LED indicators circuit board
 ![Breadboard](/week5/motorControlSetUp.JPG)
