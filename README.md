@@ -130,11 +130,10 @@ void loop() {
 ### Continued 3D Modeled to determine 3D spacing
 ![Breadboard](/week6/walkingCat2.JPG)
 ### Arduino control motor with switch and H bridge
-#### GIF format makes top speed of motor look slower but it is really faster
 ![Breadboard](/week6/motorOnAndOff.gif)
-### Arduino motor control with potentiometer and LED indicators circuit board
+### Arduino control motor with switch and H bridge circuit board
 ![Breadboard](/week6/motorOnAndOff.JPG)
-### Arduino motor control with potentiometer and LED indicators code
+### Arduino control motor with switch and H bridge code
 ```cpp
   // This Code turns a motor on and off with a switch and uses a H bridge
 const int toggleSwitch = 2; // Digital Pin 2 connects to the toggle switch
