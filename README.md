@@ -126,3 +126,40 @@ void loop() {
   }
 }
 ```
+## Week 6 homework:
+### Continued 3D Modeled to determine 3D spacing
+![Breadboard](/week6/walkingCat2.JPG)
+### Arduino control motor with switch and H bridge
+#### GIF format makes top speed of motor look slower but it is really faster
+![Breadboard](/week6/motorOnAndOff.gif)
+### Arduino motor control with potentiometer and LED indicators circuit board
+![Breadboard](/week6/motorOnAndOff.JPG)
+### Arduino motor control with potentiometer and LED indicators code
+```cpp
+  // This Code turns a motor on and off with a switch and uses a H bridge
+const int toggleSwitch = 2; // Digital Pin 2 connects to the toggle switch
+const int motorTerminal1 = 3; // Digital Pin 3 connects to motor terminal 1
+const int motorTerminal2 = 4; // Digital Pin 4 connects to motor terminal 2
+const int enablePin = 9; // Digital pin 9 connects to the enable pin
+void setup() {
+  // put your setup code here, to run once:
+pinMode(toggleSwitch, INPUT); //the toggle switch functions as an input
+pinMode(motorTerminal1, OUTPUT);
+pinMode(motorTerminal2, OUTPUT);
+pinMode(enablePin, OUTPUT);
+
+digitalWrite(enablePin, HIGH);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+if (digitalRead(toggleSwitch) == HIGH) {
+digitalWrite(motorTerminal1, LOW); //forward direction
+digitalWrite(motorTerminal2, HIGH);
+}
+else {
+digitalWrite(motorTerminal1, LOW); // turns off motor
+digitalWrite(motorTerminal2, LOW);
+}
+}
+```
