@@ -162,3 +162,13 @@ digitalWrite(motorTerminal2, LOW);
 }
 }
 ```
+## Week 7 homework:
+### 3D Printed all Links and dowel attachment pieces
+![Breadboard](/week7/3dPrintLinks.JPG)
+### Created custom 3D printed motor to link addaptor piece
+![Breadboard](/week7/motorAttached.JPG)
+### Added cardboard support to keep motor in place
+![Breadboard](/week7/cardboardSupport.JPG)
+### Controled speed of walking links
+#### Arduino code same as week5
+![Breadboard](/week7/walkingCatLinkTest.mp4.gif)
