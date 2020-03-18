@@ -171,4 +171,4 @@ digitalWrite(motorTerminal2, LOW);
 ![Breadboard](/week7/cardboardSupport.JPG)
 ### Controled speed of walking links
 #### Arduino code same as week5
-![Breadboard](/week7/walkingCatLinkTest.mp4.gif)
+![Breadboard](/week7/testLinkMotor.mp4.gif)
