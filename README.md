@@ -172,3 +172,17 @@ digitalWrite(motorTerminal2, LOW);
 ### Controled speed of walking links
 #### Arduino code same as week5
 ![Breadboard](/week7/testLinkMotor.mp4.gif)
+## Week 8 homework:
+### Walking Cat on a leash
+#### Perspective View
+![Breadboard](/week8/perspectiveView.JPG)
+#### Front View
+![Breadboard](/week8/frontView.JPG)
+#### Side View
+![Breadboard](/week8/sidetView.JPG)
+#### Bottom View
+![Breadboard](/week8/bottomView.JPG)
+### Walking Cat Side View
+![Breadboard](/week8/sideWalk.gif)
+### Walking Cat Front View
+![Breadboard](/week8/frontWalk.mp4.gif)
