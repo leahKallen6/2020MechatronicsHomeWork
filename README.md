@@ -179,7 +179,7 @@ digitalWrite(motorTerminal2, LOW);
 #### Front View
 ![Breadboard](/week8/frontView.JPG)
 #### Side View
-![Breadboard](/week8/sidetView.JPG)
+![Breadboard](/week8/sideView.JPG)
 #### Bottom View
 ![Breadboard](/week8/bottomView.JPG)
 ### Walking Cat Side View
