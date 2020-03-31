@@ -186,3 +186,17 @@ digitalWrite(motorTerminal2, LOW);
 ![Breadboard](/week8/sideWalk.gif)
 ### Walking Cat Front View
 ![Breadboard](/week8/frontWalk.mp4.gif)
+## Week 9 homework:
+### Walking Cat Unleashed
+#### Perspective View
+![Breadboard](/week9/walkingCatFinalPerspectiveView.JPG)
+#### Front View
+![Breadboard](/week9/walkingCatFinalFrontView.JPG)
+#### Side View
+![Breadboard](/week9/walkingCatFinalSideView.JPG)
+#### Arduino H-Bridge Setup
+![Breadboard](/week9/finalHBridgeArduinoSetUp.JPG)
+### Walking Cat Unleashed Test Walk
+![Breadboard](/week9/walkingCatUnleashed.gif)
+### Walking Cat Unleashed VS Tanka
+![Breadboard](/week9/walkingCatUnleashed2.gif)
