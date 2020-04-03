@@ -293,4 +293,4 @@ digitalWrite(motorTerminal4, LOW);
 }
 ```
 ### YouTube Link
-![Breadboard](/midterm/midtermVideo - YouTube.url)
+### https://youtu.be/Up8T-Q4WoqU
