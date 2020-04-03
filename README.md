@@ -296,5 +296,7 @@ digitalWrite(motorTerminal3, HIGH); //reverse direction
 digitalWrite(motorTerminal4, LOW);
 }
 ```
-### YouTube Link
+### YouTube Link "Making of Walking Cat"
 ### https://youtu.be/Up8T-Q4WoqU
+### YouTube Link "Walking Cat Explained"
+### https://youtu.be/JLUb9zZB5eY
