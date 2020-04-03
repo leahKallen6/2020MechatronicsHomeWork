@@ -202,11 +202,15 @@ digitalWrite(motorTerminal2, LOW);
 ![Breadboard](/week9/walkingCatUnleashed2.gif)
 ## Week 10 Midterm:
 ### Walking Cat
-#### Dancing
+### 3D Modeled Head in Blender
+![Breadboard](/midterm/frontHeadModel.JPG)
+![Breadboard](/midterm/sideHeadModel.JPG)
+![Breadboard](/midterm/perspectiveHeadModel.JPG)
+### Dancing Video
 ![Breadboard](/midterm/danceCat.gif)
-#### Schematic
+### Schematic
 ![Breadboard](/midterm/walkingCatSketch2.jpg)
-#### Code
+### Code
 ```cpp
   // This Code Makes Walking Cat Dance
 const int toggleSwitch = 9; // Digital Pin 9 connects to the toggle switch
