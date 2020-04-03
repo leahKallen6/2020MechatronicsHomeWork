@@ -205,7 +205,7 @@ digitalWrite(motorTerminal2, LOW);
 #### Dancing
 ![Breadboard](/midterm/danceCat.gif)
 #### Schematic
-![Breadboard](/midterm/walkingCatSketch.JPG)
+![Breadboard](/midterm/walkingCatSketch2.JPG)
 #### Code
 ```cpp
   // This Code Makes Walking Cat Dance
