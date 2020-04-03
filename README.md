@@ -200,3 +200,96 @@ digitalWrite(motorTerminal2, LOW);
 ![Breadboard](/week9/walkingCatUnleashed.gif)
 ### Walking Cat Unleashed VS Tanka
 ![Breadboard](/week9/walkingCatUnleashed2.gif)
+## Week 10 Midterm:
+### Walking Cat
+#### Dancing
+![Breadboard](/midterm/danceCat.gif)
+#### Schematic
+![Breadboard](/midterm/walkingCatSketch.JPG)
+#### Code
+```cpp
+  // This Code Makes Walking Cat Dance
+const int toggleSwitch = 9; // Digital Pin 9 connects to the toggle switch
+const int motorTerminal1 = 3; // Digital Pin 3 connects to motor terminal 1
+const int motorTerminal2 = 2; // Digital Pin 4 connects to motor terminal 2
+const int motorTerminal3 = 12; // Digital Pin 3 connects to motor terminal 1
+const int motorTerminal4 = 13; // Digital Pin 4 connects to motor terminal 2
+const int enablePin1 = 6; // Digital pin 9 connects to the enable pin
+const int enablePin2 = 5; // Digital pin 9 connects to the enable pin
+
+void setup() {
+
+pinMode(toggleSwitch, INPUT); //the toggle switch functions as an input
+pinMode(motorTerminal1, OUTPUT);
+pinMode(motorTerminal2, OUTPUT);
+pinMode(motorTerminal3, OUTPUT);
+pinMode(motorTerminal4, OUTPUT);
+pinMode(enablePin1, OUTPUT);
+pinMode(enablePin1, OUTPUT);
+
+digitalWrite(enablePin1, HIGH);
+digitalWrite(enablePin2, HIGH);
+
+}
+
+void loop() {
+
+if (digitalRead(toggleSwitch) == HIGH) {
+forward();
+delay(2000);
+stand();
+delay(500);
+reverse();
+delay(2000);
+stand();
+delay(500);
+turn1();
+delay(2000);
+stand();
+delay(500);
+turn2();
+delay(2000);
+stand();
+delay(500);
+}
+else {
+stand();
+}
+}
+
+void forward(){
+digitalWrite(motorTerminal1, LOW); //forward direction
+digitalWrite(motorTerminal2, HIGH);
+digitalWrite(motorTerminal3, LOW); //forward direction
+digitalWrite(motorTerminal4, HIGH);
+}
+
+void reverse(){
+digitalWrite(motorTerminal1, HIGH); //reverse direction
+digitalWrite(motorTerminal2, LOW);
+digitalWrite(motorTerminal3, HIGH); //reverse direction
+digitalWrite(motorTerminal4, LOW);
+}
+
+void stand(){
+digitalWrite(motorTerminal1, LOW); // turns off motor
+digitalWrite(motorTerminal2, LOW);
+digitalWrite(motorTerminal3, LOW); // turns off motor
+digitalWrite(motorTerminal4, LOW);
+}
+
+void turn1(){
+digitalWrite(motorTerminal1, HIGH); //reverse direction
+digitalWrite(motorTerminal2, LOW);
+digitalWrite(motorTerminal3, LOW); //forward direction
+digitalWrite(motorTerminal4, HIGH);
+}
+
+void turn2(){
+digitalWrite(motorTerminal1, LOW); //forward direction
+digitalWrite(motorTerminal2, HIGH);
+digitalWrite(motorTerminal3, HIGH); //reverse direction
+digitalWrite(motorTerminal4, LOW);
+}
+```
+
