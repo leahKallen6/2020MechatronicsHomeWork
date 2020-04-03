@@ -292,4 +292,5 @@ digitalWrite(motorTerminal3, HIGH); //reverse direction
 digitalWrite(motorTerminal4, LOW);
 }
 ```
-
+### YouTube Link
+![Breadboard](/midterm/midtermVideo - YouTube.url)
