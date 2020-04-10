@@ -416,3 +416,5 @@ void loop() {
 ![Breadboard](/week11/finalProjectProposal.jpg)
 ### Ideas:
 #### I would like to focus on an interface to control a mechanical robot arm. I would like to use a combination of knobs and bottons to have manual and pre recorded functions. I would primarily forcus on the code and 3D printing the housing for all the eletronics to make it look like a professional product. If the servo motors arrive in time I will also make the arm itself, but will prototype with LEDs in the mean time.
+### Link to robot arm example: https://www.youtube.com/watch?v=_B3gWd3A_SI
+
