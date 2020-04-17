@@ -417,4 +417,111 @@ void loop() {
 ### Ideas:
 #### I would like to focus on an interface to control a mechanical robot arm. I would like to use a combination of knobs and bottons to have manual and pre recorded functions. I would primarily forcus on the code and 3D printing the housing for all the eletronics to make it look like a professional product. If the servo motors arrive in time I will also make the arm itself, but will prototype with LEDs in the mean time.
 ### Link to robot arm example: https://www.youtube.com/watch?v=_B3gWd3A_SI
+## Week 12:
+### Servo Motor with Rotary Encoder
+### Coded so that each step rotary encoder makes, the servo motor turns 1 degree
+![Breadboard](/week12/slowServo.gif)
+#### Code
+```cpp
+// This code enables a rotary encoder to control a servo motor
+#include <Servo.h>
 
+Servo myservo;
+
+int encodeA = 5;
+int encodeB = 6;
+
+int counter = 90;
+int aState;
+int aLastState;
+
+void setup() {
+  pinMode (encodeA,INPUT);
+  pinMode (encodeB,INPUT);
+
+  Serial.begin (9600);
+
+  aLastState = digitalRead(encodeA);
+  myservo.attach(9);
+
+}
+
+void loop() {
+  aState = digitalRead(encodeA);
+  if (aState != aLastState){
+    if (digitalRead(encodeB) != aState){
+      counter ++;
+    }
+    else {
+      counter --;
+    }
+    if (counter < 1){
+    counter = 1;
+  }
+    if (counter > 178){
+    counter = 178;
+  }
+    Serial.print("Position: ");
+    Serial.println(counter);
+  }
+
+  myservo.write(counter);
+  aLastState = aState;
+}
+```
+### Coded so that each step rotary encoder makes, the servo motor turns 3.6 degrees degree
+![Breadboard](/week12/fastServo.gif)
+#### Code
+```cpp
+// This code controls a servo motor with a rotary encoder
+//the code maps the vallue of the position of the rotary encoder to make the servo rotate more than value of the encoder for each step
+#include <Servo.h>
+
+Servo myservo;
+
+int encodeA = 5;
+int encodeB = 6;
+
+int counter = 0; // gives a number value to the position of the rotary encoder
+int counterMap; // a varriable to remap the value of the rotary encoder to 1-178 degrees
+int aState;
+int aLastState;
+
+void setup() {
+  pinMode (encodeA,INPUT);
+  pinMode (encodeB,INPUT);
+
+  Serial.begin (9600);
+
+  aLastState = digitalRead(encodeA);
+  myservo.attach(9);
+
+}
+
+void loop() {
+  aState = digitalRead(encodeA);
+  if (aState != aLastState){
+    if (digitalRead(encodeB) != aState){
+      counter ++;
+    }
+    else {
+      counter --;
+    }
+    if (counter < 0){ //sets a min limit of 0
+    counter = 0;
+  }
+    if (counter > 50){ //sets a max limit of 50
+    counter = 50;
+  }
+    counterMap = map(counter, 0, 50, 1, 178); //maps the value of the encoder with the number of degrees a servo can turn
+    Serial.print("Position: ");
+    Serial.println(counter);
+    Serial.println(counterMap);
+  }
+
+  myservo.write(counterMap); //turns the servo to the position value of the rotary encoder
+  aLastState = aState;
+}
+```
+### Schematic for both
+![Breadboard](/week12/arduinoSchematic.JPG)
