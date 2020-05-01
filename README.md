@@ -525,3 +525,75 @@ void loop() {
 ```
 ### Schematic for both
 ![Breadboard](/week12/arduinoSchematic.JPG)
+## Week 13:
+### Servo Motor with Rotary Encoder and Botton 
+### When the button is on the servo moves in smaller increments
+![Breadboard](/week13/servoButtonMap.gif)
+![Breadboard](/week13/servoButtonMap.JPG)
+#### Code
+```cpp
+// This code enables a rotary encoder to control a servo motor
+#include <Servo.h>
+
+Servo myservo;
+
+int encodeA = 8;
+int encodeB = 9;
+int toggle = 13;
+
+int counter = 90;
+int counterMap; // a varriable to remap the value of the rotary encoder to 1-178 degrees
+int aState;
+int aLastState;
+int toggleState = 0;
+
+void setup() {
+  pinMode (encodeA,INPUT);
+  pinMode (encodeB,INPUT);
+  pinMode (toggle,INPUT);
+
+  Serial.begin (9600);
+
+  aLastState = digitalRead(encodeA);
+  myservo.attach(10);
+
+
+}
+
+void loop() {
+  toggleState = digitalRead(toggle);
+  if(toggleState == HIGH){
+  // fine control
+  aState = digitalRead(encodeA);
+  if (aState != aLastState){
+    if (digitalRead(encodeB) != aState){      
+      counter++;
+    }
+    else {
+      counter--;
+    }
+    Serial.print("Position: ");
+    Serial.print("ON: ");
+    Serial.println(counter);
+  }
+  counterMap = counter;
+  }
+  else{ 
+  // coarse control
+  aState = digitalRead(encodeA);
+  if (aState != aLastState){
+    if (digitalRead(encodeB) != aState){
+      counter = counter+5;
+    }
+    else {
+      counter = counter-5;
+    }
+    Serial.print("Position: ");
+    Serial.println(counter);
+  }
+  }
+  counter = constrain(counter,0,180);
+  myservo.write(counter);
+  aLastState = aState;
+}
+```
