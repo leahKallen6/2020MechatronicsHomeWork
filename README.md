@@ -601,6 +601,8 @@ void loop() {
 ## Final Project:
 ### Robot Arm 
 #### This robot arm uses 3 servo motors and 3 rotary encoders to control the arms movements. It also has one button to have finer control of the movements. I used a 3D model file from howtomechatronics.com to create the arm. Their original design used 6 motors, but I modified the model to only use 3. I 3D printed all the parts in PLA plastic using the Ender 3 Pro.
+### YouTube Link
+### https://www.youtube.com/watch?v=lkbF8uDRd4k&feature=youtu.be
 ### Testing all the movements
 ![Breadboard](/finalProject/jointTest.gif)
 ### Picking up an object
