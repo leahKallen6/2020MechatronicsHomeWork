@@ -529,6 +529,7 @@ void loop() {
 ### Servo Motor with Rotary Encoder and Botton 
 ### When the button is on the servo moves in smaller increments
 ![Breadboard](/week13/servoButtonMap.gif)
+### Circuit
 ![Breadboard](/week13/servoButtonMap.JPG)
 #### Code
 ```cpp
