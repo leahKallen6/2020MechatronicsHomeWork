@@ -598,3 +598,181 @@ void loop() {
   aLastState = aState;
 }
 ```
+## Final Project:
+### Robot Arm 
+#### This robot arm uses 3 servo motors and 3 rotary encoders to control the arms movements. It also has one button to have finer control of the movements. I used a 3D model file from howtomechatronics.com to create the arm. Their original design used 6 motors, but I modified the model to only use 3. I 3D printed all the parts in PLA plastic using the Ender 3 Pro.
+### Testing all the movements
+![Breadboard](/finalProject/jointTest.gif)
+### Picking up an object
+![Breadboard](/finalProject/pickUp.gif)
+### Circuit and Arm Photo
+![Breadboard](/finalProject/arm.JPG)
+### Schematic
+![Breadboard](/finalProject/finalArm.jpg)
+### Code
+```cpp
+
+// This code controls a robot arm with 3 servo motors using rotary encoders. There is also a button that allows for fine control of the motor movements
+#include <Servo.h>
+
+Servo servoA;
+Servo servoB;
+Servo servoC;
+
+// pins for the encoders and button
+int encodeA = 2;
+int encodeB = 3;
+int encodeC = 5;
+int encodeD = 6;
+int encodeE = 8;
+int encodeF = 9;
+int toggle = 13;
+
+// variables to track encoder movement and tell servo how many degrees to turn
+int counterA = 90;
+int aStateA;
+int aLastStateA;
+int counterB = 90;
+int aStateB;
+int aLastStateB;
+int counterC = 90;
+int aStateC;
+int aLastStateC;
+int toggleState = 0;
+
+void setup() {
+  pinMode (encodeA,INPUT);
+  pinMode (encodeB,INPUT);
+  pinMode (encodeC,INPUT);
+  pinMode (encodeD,INPUT);
+  pinMode (encodeE,INPUT);
+  pinMode (encodeF,INPUT);
+  pinMode (toggle,INPUT);
+
+  Serial.begin (9600);
+
+  aLastStateA = digitalRead(encodeA);
+  servoA.attach(4);
+  servoB.attach(7);
+  servoC.attach(10);
+
+
+}
+
+void loop() {
+  // see if the button is being pressed
+  toggleState = digitalRead(toggle);
+  if(toggleState == HIGH){
+  // fine control when button is on
+  servoHandFine();
+  servoWristFine();
+  servoArmFine();
+  }
+  else{ 
+  // coarse control when botton is off
+  servoHand();
+  servoWrist();
+  servoArm();
+  }
+  // make sure servo does not exceed minimum or maximum degrees
+  counterA = constrain(counterA,0,180);
+  counterB = constrain(counterB,0,180);
+  counterC = constrain(counterC,0,180);
+  // turn servo motors to the value of the encoder
+  servoA.write(counterA);
+  servoB.write(counterB);
+  servoC.write(counterC);
+  // record last state of encoder
+  aLastStateA = aStateA;
+  aLastStateB = aStateB;
+  aLastStateC = aStateC;
+}
+
+// functions for all the servo motors
+void servoHandFine(){
+  aStateA = digitalRead(encodeA);
+  if (aStateA != aLastStateA){
+    if (digitalRead(encodeB) != aStateA){      
+      counterA++;
+    }
+    else {
+      counterA--;
+    }
+    Serial.print("Position: ");
+    Serial.print("ON: ");
+    Serial.println(counterA);
+  }
+}
+
+void servoWristFine(){
+  aStateB = digitalRead(encodeC);
+  if (aStateB != aLastStateB){
+    if (digitalRead(encodeD) != aStateB){      
+      counterB++;
+    }
+    else {
+      counterB--;
+    }
+    Serial.print("Position: ");
+    Serial.print("ON: ");
+    Serial.println(counterB);
+  }
+}
+
+void servoArmFine(){
+  aStateC = digitalRead(encodeE);
+  if (aStateC != aLastStateC){
+    if (digitalRead(encodeF) != aStateC){      
+      counterC++;
+    }
+    else {
+      counterC--;
+    }
+    Serial.print("Position: ");
+    Serial.print("ON: ");
+    Serial.println(counterC);
+  }
+}
+
+void servoHand(){
+  aStateA = digitalRead(encodeA);
+  if (aStateA != aLastStateA){
+    if (digitalRead(encodeB) != aStateA){
+      counterA = counterA+5;
+    }
+    else {
+      counterA = counterA-5;
+    }
+    Serial.print("Position: ");
+    Serial.println(counterA);
+  }
+}
+
+void servoWrist(){
+  aStateB = digitalRead(encodeC);
+  if (aStateB != aLastStateB){
+    if (digitalRead(encodeD) != aStateB){
+      counterB = counterB+5;
+    }
+    else {
+      counterB = counterB-5;
+    }
+    Serial.print("Position: ");
+    Serial.println(counterB);
+  }
+}
+
+void servoArm(){
+  aStateC = digitalRead(encodeE);
+  if (aStateC != aLastStateC){
+    if (digitalRead(encodeF) != aStateC){
+      counterC = counterC+5;
+    }
+    else {
+      counterC = counterC-5;
+    }
+    Serial.print("Position: ");
+    Serial.println(counterC);
+  }
+}
+```
